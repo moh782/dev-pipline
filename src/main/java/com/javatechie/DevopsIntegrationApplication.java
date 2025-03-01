@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DevopsIntegrationApplication {
 
-	@GetMapping
-	public String message(){
+    @GetMapping
+    public String message(){
+        String name = "Utilisateur";  // Hardcoded name
+        return "<html>" + 
+                "<head><title>DevOps Pipeline</title></head>" + 
+                "<body style='background-color: #282c34; color: white; text-align: center; padding: 50px;'>" + 
+                "<h1>Bienvenue dans les pipeline DevOps, " + name + " 🚀</h1>" + 
+                "</body>" + 
+                "</html>";
+    }
 
-        return "<html>" + "<head><title>DevOps Pipeline</title></head>" + "<body style='background-color: #282c34; color: white; text-align: center; padding: 50px;'>" + "<h1>Bienvenue dans les pipeline DevOps, " + name + " 🚀</h1>" + "</body>" + "</html>";
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(DevopsIntegrationApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(DevopsIntegrationApplication.class, args);
+    }
 }
+
